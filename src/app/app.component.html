@@ -1,0 +1,17 @@
+<mat-card>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">  
+        <label for="album">Album</label>
+        <select id="album" (change) = "changeAlbum($event)" class="form-control">
+          <option *ngFor="let album of albumList" [value]="album.id">
+            {{album.title}}
+          </option>
+        </select><br/>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <img [src]="photoUrl">
+      </div>
+    </div>
+  </div>
+</mat-card>
